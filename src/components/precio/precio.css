@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter:wght@400;700&display=swap');
+/*   font-family: 'DM Sans', sans-serif;
+ */
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .opacidad {
+    opacity: 0.2;
+  }
+
+/*---------- botones ------------*/  
+  
+  .button {
+    padding: 10px 50px;
+    font-size: 1.5rem;
+    margin: 10%;
+    border-radius: 30px;
+    color: #f4f4f4;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .button:hover {
+    transform: scale(1.2);
+  }
+  
+  .button1 {
+    background-color: var(--purple-dark);
+  }
+  
+  .button2 {
+    background-color: var(--blue-dark);    
+  }
+  
+  .button3 {
+    background-color: var(--purple-dark);
+  }
+  
+/*------------ packages ---------------*/
+
+.services__container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.service {
+  background: var(--card__background);
+  border-radius: 2rem;
+  border: 1px solid var(--white);
+  height: 700px;
+}
+
+.service__head {
+  padding: 2rem;
+}
+
+.service__head h3{
+  color: var(--white);
+  font-size: 2rem;
+  text-align: left;
+}
+
+.service__head p {
+  border-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.service__list {
+  padding: 2rem;
+}
+
+.service__list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.service__list-icon {
+  overflow: visible;
+  background-color: var(--purple-dark);
+  border-radius: 50%;
+  border: 2.5px solid var(--purple-dark);
+  color: var(--white);
+  font-size: 25px;
+}
+
+.service__list p {
+  font-size: 0.8rem;
+  padding: 1px;
+}
+
+
+
+
+/*------------ packages 2 ---------------*/
+.servici {
+  background: var(--purple-ligth);
+  border-radius: 2rem;
+  border: 1px solid var(--purple-dark);
+  height: 700px;
+}
+
+.servici__head {
+  padding: 2rem;
+  color: var(--blue-dark);
+}
+
+.servici__head h3{
+  color: var(--blue-dark);
+  font-size: 2rem;
+  text-align: left;
+}
+.servici__head h4{
+  color: var(--blue-dark);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.servici__head p {
+  border-bottom: 10px;
+  font-size: 0.8rem;
+  color: var(--blue-dark);
+  text-align: left;
+}
+
+.hola_list {
+  padding: 2rem;
+}
+
+.hola_list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.hola_list   opacidad{
+  opacity: 0.5;
+}
+
+.hola_list-icon {
+  overflow: visible;
+  background-color: var(--blue-dark);
+  border-radius: 50%;
+  border: 2.5px solid var(--blue-dark);
+  color: var(--white);
+  font-size: 25px;
+}
+
+.hola_list p {
+  font-size: 0.8rem;
+  padding: 1px;
+  color: var(--blue-dark);
+}
+
+ /* -------    switch    ---------- */
+
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  margin: 2rem;
+}
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #94a1b2;
+    -webkit-transition: 0.5s;
+  
+    box-shadow: 2px 6px 25px #1e2321;
+    transform: translate(0px, 0px);
+    transition: 0.6s ease transform, 0.6s box-shadow;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--purple-dark);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--purple-dark);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .package-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /*       ===================medium devices===================           */
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+  }
+  .service {
+      height: auto;
+  }
+}
+
+/*       ===================small devices===================           */
+
+@media screen and (max-width: 600px) {
+  .services__container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  }
+}

@@ -1,13 +1,92 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root { 
+  --bg: #242629; 
+  --white: #fffffe; 
+  --border: #eff0f6; 
+  --card__background: #16161a; 
+  --grey: #94a1b2; 
+  --blue-dark: #0e172c; 
+  --purple-ligth: #b69eff; 
+  --purple-dark: #7f5af0;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}  
+
+body {
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+/* ================= estilo general ================= */
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+h4 {
+  position: left;
+  font: Inter bold;
+  color: var(--white);
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: -10px;
+  margin-bottom: 3px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 3px;
+}
+
+p {
+  color: var(--grey);
+  font: var(--body1-regular);
+  font-size: 1.3rem;
+}
+
+span {
+  color: var(--white);
+  border: 5px;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+
+
+
+/*       ===================medium devices===================           */
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: var(--container--width-md);
+  }
+}
+/*       ===================medium devices===================           */
+
+@media screen and (max-width: 600px) {
+  .container{
+    width: var(--container--width-sm);
+  }
 }
